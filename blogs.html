@@ -45,7 +45,6 @@
 
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
@@ -56,13 +55,11 @@
     <link rel="stylesheet" href="css/responsive.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css" />
-
-    <!-- Modernizr -->
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- Font Awesome Kit CDN -->
+    <script
+      src="https://kit.fontawesome.com/ffbdd8ae2a.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -107,7 +104,7 @@
         <div class="container">
           <div class="inner">
             <div class="row">
-              <div class="col-lg-3 col-md-3 col-12">
+              <div class="col-lg-3 col-md-3 col-6">
                 <!-- Start Logo -->
                 <div class="logo">
                   <a href="index.html"
@@ -124,7 +121,7 @@
                 <div class="6"></div>
                 <!-- End Mobile Nav -->
               </div>
-              <div class="col-lg-7 col-md-9 col-12">
+              <div class="col-lg-7 col-md-7 col-12 main-menu-items">
                 <!-- Main Menu -->
                 <div class="main-menu">
                   <nav class="navigation">
@@ -177,8 +174,32 @@
                 </div>
                 <!--/ End Main Menu -->
               </div>
-              <div class="col-lg-2 col-12">
-                <div class="get-quote">
+              <div
+                class="col-lg-2 col-md-2 col-6"
+                style="
+                  display: flex;
+                  flex-direction: row-reverse;
+                  justify-content: center;
+                  align-items: center;
+                  column-gap: 10px;
+                "
+              >
+                <div id="menu-btn">
+                  <button
+                    style="
+                      color: #000;
+                      font-weight: 900;
+                      width: 32px;
+                      height: 32px;
+                      border: none;
+                      background-color: none;
+                      display: none;
+                    "
+                  >
+                    <i class="fa-solid fa-bars"></i>
+                  </button>
+                </div>
+                <div style="color: #fff" class="">
                   <a href="donate.html" class="btn">Donate</a>
                 </div>
               </div>
@@ -187,6 +208,78 @@
         </div>
       </div>
       <!--/ End Header Inner -->
+      <!-- Mobile Menu toogle container -->
+      <div
+        id="mobile-menu-container"
+        style="
+          width: 350px;
+          height: 400px;
+          position: fixed;
+          top: 97px;
+          right: -99999px;
+          z-index: 9999;
+          background-color: #ffffff;
+          transition: right 0.3s ease-in-out !important;
+        "
+        class="main-menu"
+      >
+        <nav class="navigation">
+          <div
+            id="close-menu"
+            style="
+              position: absolute;
+              top: 12px;
+              right: 20px;
+              cursor: pointer;
+              z-index: 99999;
+              font-weight: bold;
+            "
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <ul style="display: flex; flex-direction: column" class="nav menu">
+            <li class="active">
+              <a href="index.html">HOME</a>
+            </li>
+            <li><a href="index.html#about">ABOUT US</a></li>
+
+            <!-- Parent menu -->
+            <li>
+              <a href="#what">WHAT WE DO<i class="icofont-rounded-down"></i></a>
+              <!-- Child menu -->
+              <ul class="dropdown">
+                <li><a href="education.html">Education</a></li>
+                <li>
+                  <a href="sustainable-livelihood.html"
+                    >Food Security & Livelihood</a
+                  >
+                </li>
+                <li><a href="nutrition.html">Nutrition</a></li>
+
+                <li><a href="protection.html">Protection</a></li>
+
+                <li>
+                  <a href="WASH water, sanitation and hygiene.html">WASH</a>
+                </li>
+
+                <li>
+                  <a href="women-economic-empowerment.html"
+                    >women-economic-empowerment</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <!-- Parent menu -->
+            <li>
+              <a href="news.html">NEWS<i class="icofont-rounded-down"></i></a>
+              <!-- Child menu -->
+              <ul class="dropdown">
+                <li><a href="blogs.html">Blogs</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <!-- End Header -->
 
